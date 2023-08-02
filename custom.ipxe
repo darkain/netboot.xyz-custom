@@ -4,6 +4,7 @@
 ###
 
 :start
+set menu_bsd 1
 echo Hello world!
 sleep 10
 goto custom_exit
