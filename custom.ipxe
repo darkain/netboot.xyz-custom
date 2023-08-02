@@ -4,11 +4,15 @@
 ###
 
 :start
-set menu_bsd 1
-iseq ${menu_bsd} 1 && item bsd ${space} BSD Installs ||
-echo Hello world!
-sleep 10
-goto custom_exit
+clear menu
 
-:custom_exit
-exit 0
+set menu_bsd 1
+set space:hex 20:20
+set space ${space:string}
+
+item --gap Default:
+item local ${space} Boot from local hdd
+item --gap Distributions:
+
+iseq ${menu_bsd} 1 && item bsd ${space} BSD Installs ||
+
